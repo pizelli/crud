@@ -9,7 +9,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/caiolandgraf/crud.svg?style=flat-square)](https://scrutinizer-ci.com/g/caiolandgraf/crud)
 [![Total Downloads](https://img.shields.io/packagist/dt/caiolandgraf/crud.svg?style=flat-square)](https://packagist.org/packages/caiolandgraf/crud)
 
-Você pode saber mais **[clicando aqui](http://suporteinformatika.com.br/)**.
+Você pode saber mais **[clicando aqui](http://suporteinformatika.com.br)**.
 
 ### Highlights
 
