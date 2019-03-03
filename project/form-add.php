@@ -1,5 +1,32 @@
 <?php
 require 'init.php';
+require 'sql.php';
+
+// take the form data
+$name = isset($_POST['name']) ? $_POST['name'] : null;
+$email = isset($_POST['email']) ? $_POST['email'] : null;
+$gender = isset($_POST['gender']) ? $_POST['gender'] : null;
+$birthdate = isset($_POST['birthdate']) ? $_POST['birthdate'] : null;
+
+
+// validation (very simple, just to avoid empty data)
+if(count($_POST)){
+    if (empty($name) || empty($email) || empty($gender) || empty($birthdate)) {
+        echo "Volte e preencha todos os campos";
+        exit;
+    }
+}
+
+// the date comes in the format dd/mm/YYYY
+// so we need to convert to YYYY-mm-dd
+$isoDate = dateConvert($birthdate);
+
+if($name != null){
+    $sql = new Sql();
+    $sql->add($name, $email, $gender, $isoDate);
+}
+
+
 ?>
 <!doctype html>
 <html>
@@ -15,7 +42,7 @@ require 'init.php';
 
 <h2>Cadastro de Usuário</h2>
 
-<form action="add.php" method="post">
+<form method="post">
     <label for="name">Nome: </label>
     <br>
     <input type="text" name="name" id="name">
