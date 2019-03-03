@@ -1,0 +1,25 @@
+{
+    "name": "CaioLandgraf/crud",
+    "description": "Projeto C.R.U.D Giovanni",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Caio Landgraf",
+            "email": "caiolandgraf@outlook.com",
+            "homepage": "http://www.suporteinformatika.com.br",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        }
+    },
+    "require": {
+        "php": "^7.3.1",
+        "ext-pdo": "^7.1"
+    }
+}
